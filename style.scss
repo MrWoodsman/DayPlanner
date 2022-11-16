@@ -14,7 +14,8 @@ body {
 }
 
 #top_menu {
-    position: relative;
+    width: 100%;
+    position: sticky;
     z-index: 100;
     background-color: rgb(43, 41, 80);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
@@ -59,7 +60,7 @@ body {
     }
     .day_box {
         font-size: 14px;
-        font-weight: bold;
+        font-weight: normal;
         text-align: center;
         color: white;
         width: calc((100% - var(--hours_size)) / 7);
@@ -76,6 +77,9 @@ body {
             justify-content: center;
         }
     }
+    // .day_box:nth-child(odd) {
+    //     background: red;
+    // }
 }
 
 .actual_day {
@@ -103,6 +107,9 @@ body {
             align-items: center;
             justify-content: center;
         }
+        // .box:nth-child(even) {
+        //     background: red;
+        // }
     }
     .row:nth-child(odd) {
         background: rgb(54, 50, 88);
@@ -123,7 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(var(--hours_size) - 2px);
+    width: var(--hours_size);
     .indicator {
         display: flex;
         justify-content: flex-end;

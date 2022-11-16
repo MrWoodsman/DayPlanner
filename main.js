@@ -13,6 +13,7 @@ function GenerateHoursBox() {
         const hour = document.createElement('div')
         hour.setAttribute('class','row')
         hour.innerHTML = content
+        hour.setAttribute('hours',hours)
         document.querySelector('#hours_day').appendChild(hour)
         // 2
         const indicator = document.createElement('div')
