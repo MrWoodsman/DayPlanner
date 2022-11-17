@@ -42,6 +42,7 @@ body {
   margin: 0;
 }
 #navigation .change_week {
+  cursor: pointer;
   background: none;
   border: none;
 }
@@ -65,6 +66,7 @@ body {
 }
 #day_indicator .day_box {
   font-size: 14px;
+  position: relative;
   font-weight: normal;
   text-align: center;
   color: white;
@@ -96,6 +98,7 @@ body {
 
 #hours_day {
   width: calc(100% - var(--hours_size));
+  position: relative;
 }
 #hours_day .row {
   display: grid;
@@ -135,6 +138,7 @@ body {
   height: var(--height_col);
 }
 #hours .indicator .hour_box {
+  z-index: 75;
   position: relative;
 }
 #hours .indicator .hour_box .minutes {
@@ -171,8 +175,7 @@ body {
   z-index: 500;
   transform: translateY(0px);
   top: 0;
-  margin-top: 15px;
-  width: calc(100vw - var(--hours_size));
+  width: 100%;
   right: 0;
   height: 3px;
   background: var(--color);
@@ -182,9 +185,10 @@ body {
   position: absolute;
   width: 20px;
   top: 50%;
-  transform: translateX(-22.5%) translateY(-50%);
-  -webkit-clip-path: polygon(0 0, 50% 50%, 0 100%);
-          clip-path: polygon(0 0, 50% 50%, 0 100%);
+  right: 0;
+  transform: translateX(0px) translateY(-50%);
+  -webkit-clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+          clip-path: polygon(100% 0, 50% 50%, 100% 100%);
   aspect-ratio: 1;
   background-color: var(--color);
 }
@@ -195,5 +199,6 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 250;
   border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */

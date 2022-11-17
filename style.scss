@@ -39,6 +39,7 @@ body {
         margin: 0;
     }
     .change_week {
+        cursor: pointer;
         background: none;
         border: none;
         i {
@@ -61,6 +62,7 @@ body {
     }
     .day_box {
         font-size: 14px;
+        position: relative;
         font-weight: normal;
         text-align: center;
         color: white;
@@ -98,6 +100,7 @@ body {
 
 #hours_day {
     width: calc(100% - var(--hours_size));
+    position: relative;
     .row {
         display: grid;
         grid-template-columns: repeat(7, calc(100% / 7));
@@ -144,6 +147,7 @@ body {
         // background-color: aqua;
         height: var(--height_col);
         .hour_box {
+            z-index: 75;
             position: relative;
             .minutes {
                 width: 7px;
@@ -182,8 +186,8 @@ body {
     z-index: 500;
     transform: translateY(0px);
     top: 0;
-    margin-top: 15px;
-    width: calc(100vw - var(--hours_size));
+    // width: calc(100vw - var(--hours_size) - 12px);
+    width: 100%;
     right: 0;
     height: 3px;
     background: var(--color);
@@ -192,8 +196,9 @@ body {
         position: absolute;
         width: 20px;
         top: 50%;
-        transform: translateX(-22.5%) translateY(-50%);
-        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        right: 0;
+        transform: translateX(0px) translateY(-50%);
+        clip-path: polygon(100% 0, 50% 50%, 100% 100%);
         aspect-ratio: 1;
         background-color: var(--color);
     }
@@ -205,5 +210,6 @@ body {
     height: 100%;
     position: absolute;
     top: 0;
+    z-index: 250;
     border-radius: 8px;
 }
