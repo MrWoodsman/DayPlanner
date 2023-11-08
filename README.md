@@ -1,4 +1,4 @@
-# DayPlanner
+# Day planner
 
 Niedokończony projekt weowej aplikacji do planiwania dni
 
